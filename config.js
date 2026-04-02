@@ -6,17 +6,6 @@
  * all the bot settings in one place
  * makes it easier to manage everything - wasi
  */
-
-module.exports = {
-    // Bot Information - basic stuff
-    botInfo: {
-        name: process.env.BOT_NAME || 'WASI-MD V7',
-        version: '7.2.0', // current version
-        author: 'ITXXWASI',
-        description: 'Advanced WhatsApp Multi-Device Bot',
-        website: 'https://wasi-tech.com'
-    },
-    
     // Owner Configuration - thats me lol
     owner: {
         number: process.env.OWNER_NUMBER || '255715647593',
