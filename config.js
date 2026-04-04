@@ -49,13 +49,14 @@ module.exports = {
     
     // Database Configuration
     database: {
-        type: process.env.DB_TYPE || 'mongodb',
-        url: process.env.MONGO_URI || process.env.DATABASE_URL,
-        name: 'wasimd_v7',
-        options: {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            serverSelectionTimeoutMS: 5000
+    type: process.env.DB_TYPE || 'sqlite',   // ← Change default to 'sqlite'
+    url: process.env.DATABASE_URL || './wasimd_v7.db',  // ← Use a local file for SQLite
+    name: 'wasimd_v7',
+    options: {
+        // Remove or keep these if the bot allows; they are Mongo-specific
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        serverSelectionTimeoutMS: 5000
         }
     },
     
